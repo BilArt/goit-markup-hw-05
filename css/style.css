@@ -251,14 +251,52 @@ footer .custom-link__logo {
   transition: background-color ease-in-out;
 }
 
+.footer__subscribe p {
+  margin-bottom: 16px;
+}
+
 .subscribe__form {
   display: flex;
+}
+
+.subscribe__form label {
+  margin-right: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+}
+
+.subscribe__form input {
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  padding: 8px 16px;
+  min-width: 264px;
+  border-radius: 4px;
+  background-color: inherit;
+  outline: transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.subscribe__form input:active {
+  border-color: var(--iris-color);
+}
+
+.subscribe__form input:focus {
+  border-color: var(--iris-color);
+}
+
+.subscribe__form input::placeholder {
+  color: var(--white-color);
 }
 
 .subscribe__form button {
   padding: 8px 24px;
   line-height: 1.5;
-  max-height: 40px; /* Примусово обмежив!!! */
   letter-spacing: 0.04em;
   text-align: center;
   color: var(--white-color);
@@ -269,6 +307,8 @@ footer .custom-link__logo {
   display: flex;
   text-align: center;
 }
+
+/* modal */
 
 .modal__form label {
   display: flex;
@@ -292,10 +332,6 @@ footer .custom-link__logo {
 
 .form__group label {
   display: block;
-  margin-bottom: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--white-color);
 }
 
 .form__group input {
@@ -304,10 +340,6 @@ footer .custom-link__logo {
   padding: 8px 16px;
   border-radius: 4px;
   background-color: inherit;
-}
-
-.form__group input::placeholder {
-  color: var(--white-color);
 }
 
 /* index.html */
@@ -634,7 +666,7 @@ footer .custom-link__logo {
   padding: 72px 24px 24px 24px;
   position: absolute;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
   left: 50%;
@@ -678,7 +710,7 @@ footer .custom-link__logo {
 .modal-form label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -687,15 +719,38 @@ footer .custom-link__logo {
   color: #8e8f99;
 }
 
-.modal-form label input {
-  margin-top: 4px;
+.modal-form__block {
+  margin-bottom: 8px;
+}
+
+.block-input {
+  position: relative;
+}
+
+.block-input input {
+  outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 14px 17px 14px 17px;
 }
 
-.modal-form label input:active {
+.block-input input:active {
   border-color: var(#4d5ae5);
+}
+
+.block-input input:focus {
+  border-color: var(--iris-color);
+}
+
+.block-input__icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.block-input input:focus + .block-input__icon {
+  fill: var(--iris-color);
 }
 
 .modal-form label textarea {

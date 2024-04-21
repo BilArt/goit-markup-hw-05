@@ -103,6 +103,7 @@ p {
   letter-spacing: 0.02em;
   color: var(--navy-blue);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .flex {
@@ -528,6 +529,10 @@ footer .custom-link__logo {
   transition: fill ease-in-out;
 }
 
+.customers-section__list-item use {
+  fill: #8e8f99;
+}
+
 .customers-section__list-item:hover a {
   border-color: #404bbf;
 }
@@ -708,8 +713,6 @@ footer .custom-link__logo {
 }
 
 .modal-form label {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 4px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -735,7 +738,8 @@ footer .custom-link__logo {
   outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  padding: 14px 17px 14px 38px;
+  padding-left: 38px;
+  height: 40px;
   width: 100%;
 }
 
@@ -758,7 +762,7 @@ footer .custom-link__logo {
   fill: var(--iris-color);
 }
 
-.modal-form label textarea {
+.text-area textarea {
   margin-top: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -767,12 +771,18 @@ footer .custom-link__logo {
   outline: transparent;
 }
 
-.modal-form label textarea:active {
+.text-area textarea:active {
   border-color: var(--iris-color);
 }
 
-.modal-form label textarea:focus {
+.text-area textarea:focus {
   border-color: var(--iris-color);
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .checkbox {
@@ -786,13 +796,19 @@ footer .custom-link__logo {
 }
 
 .checkbox span {
-  display: block;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  fill: transparent;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   height: 16px;
   width: 16px;
+  margin-right: 8px;
+}
+
+.checkbox a {
+  color: var(--iris-color);
 }
 
 .checkbox label {
@@ -825,5 +841,10 @@ footer .custom-link__logo {
   border: 0;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: var(--iris-color);
+  background-color: var(--iris-color);
+  cursor: pointer;
+}
+
+.modal__form-btn:hover {
+  background-color: var(--ocean-color);
 }
